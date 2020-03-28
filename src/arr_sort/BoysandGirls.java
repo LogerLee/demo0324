@@ -41,10 +41,10 @@ class Girls1{
     }
 }
 public class BoysandGirls {
-    Boys1 boys1;Girls1 girls1;
+    private Boys1 boys1;private Girls1 girls1;
     void setBoys1(int[] By,int[] Bi,String[] Be){
-        boys1 = new Boys1(By,Bi,Be);
-    }
+        boys1 = new Boys1(By,Bi,Be);//用new实例化一个对象后，才给对象分配内存，并调用对象的构造方法
+    }                               //这里的Boy1恰好已经自定义了一个它的构造方法
     void setGirls1(int[] Gy,int[] Gi,String[] Ge){
         girls1 = new Girls1(Gy,Gi,Ge);
     }
@@ -87,7 +87,7 @@ public class BoysandGirls {
                 int years_D_value = Math.abs(b_y[i]-g_y[j]);
                 if (b_i[i]>=g_i[j]*1.5&&years_D_value<=3&&b_e2[i]>g_e2[i]){
                     int Bid = i+1;int Gid = j+1;
-                    System.out.println("男生："+Bid+"&"+"女生："+Gid);
+                    System.out.println("恭喜 "+"男生："+Bid+"&"+"女生："+Gid+"配对成功");
                 }
             }
         }
@@ -98,13 +98,13 @@ public class BoysandGirls {
 
     public static void main(String[] args){
         int[] Boys_years = {30,26,45,46,22};
-        int[] Girls_years = {19,18,27,17,29};
+        int[] Girls_years = {19,18,27,45,29};
         int[] Boys_income = {5000,6000,4000,6500,10000};
-        int[] Girls_income = {4500,4200,6000,4500,9000};
+        int[] Girls_income = {4500,4200,6000,3500,9000};
         //int[] Boys_edu = {0,1,0,1,2};
         //int[] Girls_edu = {1,0,1,1,1};
-        String[] Boys_edu = {"本科","研究生","本科","专科","研究生"};
-        String[] Girls_edu = {"研究生","本科","专科","研究生","本科"};
+        String[] Boys_edu = {"本科","研究生","本科","研究生","研究生"};
+        String[] Girls_edu = {"研究生","本科","专科","本科","本科"};
         BoysandGirls boysandgirls = new BoysandGirls();
         boysandgirls.setBoys1(Boys_years,Boys_income,Boys_edu);
         boysandgirls.setGirls1(Girls_years,Girls_income,Girls_edu);
