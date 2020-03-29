@@ -1,5 +1,7 @@
 package arr_sort;
 
+import java.util.*;
+
 public class arr_about {//包含main方法的类必须是public的
     /*
      * main()方法是Java应用程序的入口方法
@@ -19,6 +21,11 @@ public class arr_about {//包含main方法的类必须是public的
         fun4(a);//选择法对int数组a排序（从大到小）
         fun5(a);
         fun6(a);
+        //利用Arrays.sort()对数组进行排序(从小到大)，也可以对String类型排序，按照abcd
+        Arrays.sort(a);
+        fun2(a,"利用Arrays.sort()对数组进行排序后的数组：");
+        //利用Arrays.toString打印出数组中所有数据
+        System.out.println("\r\n利用Arrays.toString打印出数组中所有数据："+Arrays.toString(str));
     }
 
     private static String fun6(int[] arr) {
