@@ -5,7 +5,7 @@ class Boys1{
     int[] Boys_income;
     String[] Boys_edu;
     //int[] New_Boys_edu;
-    Boys1(int[] B_years,int[] B_income,String[] B_edu){   //构造函数，接受main()传递过来的形参值
+    Boys1(int[] B_years,int[] B_income,String[] B_edu){   //构造方法，接受main()传递过来的形参值，它不能被继承和覆盖，但在相同类里可以被重写
         Boys_years = B_years;
         Boys_income = B_income;
         Boys_edu = B_edu;
